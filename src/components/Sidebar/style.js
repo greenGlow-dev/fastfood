@@ -1,6 +1,4 @@
-
 import styled from "styled-components"
-
 
 import { NavLink } from 'react-router-dom'
 
@@ -8,9 +6,10 @@ export const Container =styled.div`
 display: flex;
 flex-direction:column;
 width:300px;
+min-width:300px;
 height:100vh;
 padding:28px 0 40px 0; /// tepasiga:28px yonga 0 pastiga 40px yonga 0;
-border:2px solid red;
+background-color:white;
 `;
 
 export const LogoWrapper = styled.div`
@@ -19,6 +18,7 @@ align-items:center;
 height:100px;
 margin-bottom:64px;
 padding:0 24px;
+
 
 
 `;
@@ -56,17 +56,20 @@ opacity: 0.5;
  export const Wrapper = styled.div`
  display:flex;
  flex-direction:column;
-//  background-color:blue;
+ margin-left:12px;
  `
 
  export const Link = styled(NavLink)`
  display:flex;
  align-items:center;
+ justify-content: center;
  font-weight: 400;
  font-size: 15px;
  line-height: 18px;
  color: #2D3A45;
  text-decoration:none;
+
+
 
 
  .icon{
@@ -78,19 +81,20 @@ opacity: 0.5;
      border-radius:6px; 
      margin-right:10px; 
  }
- `;
+ `
 
  export const Item = styled.div`
  display:flex;
  align-items:center;
  margin:0 24px 20px 0;
- heifht: 48px;
+ height: 48px;
  padding-left:20px;
-//  background-color:#e5e5e5;
-.Active{
-  background-color:red;
-}
+ background: ${({active})=> active && '#FCB600;'};
+ color: ${({active})=> active && 'white;'};
+ border-radius: 0px 6px 6px 0px;
  `
+
+
 
  export const Icon  = styled.img`
 width:16px;

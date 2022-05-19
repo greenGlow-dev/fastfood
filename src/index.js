@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Root from './root/';
-import Sidebar from './components/Sidebar/index.jsx';
+
 
 
 ReactDOM.render(
   <React.StrictMode>
-  
-    <Root />
+       <Root />
   </React.StrictMode>,
   document.getElementById('root')
 );

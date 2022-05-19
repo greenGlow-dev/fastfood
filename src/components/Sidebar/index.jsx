@@ -1,21 +1,24 @@
-import React, { Component } from 'react'
+ import React, { useState } from 'react'
 import { Container, LogoWrapper, TextWrap, Wrapper, Link, Item, Icon} from './style'
 import logo from '../../assets/img/logo.png'
 import {sidebar} from '../../utils/sidebar'
-import { NavLink } from 'react-router-dom'
 
 
 
 
 
 export const Sidebar = () => {
+
+const[isActive, setActive] = useState(1);
+
   return (
     <Container>
         <LogoWrapper>
 
               <LogoWrapper.Img src = {logo} alt = 'logo' />
+
                <TextWrap>
-                      <TextWrap.Title>
+                      <TextWrap.Title>  
                         FastFood
                       </TextWrap.Title> 
 
@@ -26,19 +29,18 @@ export const Sidebar = () => {
 
           </LogoWrapper>
 
-          <Wrapper>
+          <Wrapper >
             
           {
 
 
             sidebar.map(({id,title,path,Icon})=>{
               return(
-                <Item key={id}>
-                      <Link key={id} to={path}>
+                <Item key={id} onClick = {()=>setActive(id)}  active = {isActive === id}  >
+                      <Link key={id} to={path}  >
                         <Icon className='icon' src = {Icon} />
-                        {title}
+                          {title}
                       </Link>
-                        
                 </Item>
               )
             })
