@@ -20,8 +20,8 @@ width:100%;
 export const Wrapper = styled.div`
 display:flex;
 align-items:${({align})=>'center'};
-width: ${({align})=>(align ? '300px': '100%')};
-border: ${({align})=> align && '2px solid #E5E5E5'};
+width: ${({align})=>(align ? '600px': '100%')};
+// border: ${({align})=> align && '2px solid #E5E5E5'};
 justify-content:center;
 height:80px;
 padding:22px 40px;
@@ -64,6 +64,7 @@ text-align:center;
 height: 50px;
 background: #EDEFF3;
 border-radius: 24px;
+
 `
 export const TabClone = styled(Tab)`
 display:none;
@@ -73,25 +74,7 @@ display:none;
     margin-left: auto;
 }
 `
-Tab.Item = styled.div`
-display: flex;
-align-items: center;
-font-family: 'SFProDisplay';
-justify-content:center;
-font-size: 14px;
-line-height: 16px;
-width: 162px;
-height: 36px;
-left: 563px;
-top: 22px;
-mix-blend-mode: normal;
-width:170px;
-cursor: pointer;
-background:${({active})=> active && 'white'};
-box-shadow: ${({active})=>active && '0px 2px 2px rgba(174, 176, 181, 0.314986)'};
-border-radius:  18px;
-transition: all .28s
-`
+
 
 Tab.Icon = styled.img`
 display: flex;
@@ -108,5 +91,46 @@ background: ${({active})=> active && '#FFFFFF;'}
 box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
 border-radius: 18px;
 transition: all .28s;
+
+`
+Tab.Search = styled.img`
+width: 17.22px;
+height: 14.22px;
+left: 817px;
+top: 32px;
+margin-right: 20px;
+`
+Tab.SearchText = styled.div`
+font-family: 'SFProDisplay';
+font-size: 13px;
+line-height: 15px;
+color: #2D3A45;
+mix-blend-mode: normal;
+opacity: 0.4;
+margin-left: 20px;
+`
+
+export const  FilterWrapper1 = styled.div`
+display:flex;
+align-items:center;
+justify-content: center;
+width: 50px;
+height: 50px;
+background: #EDEFF3;
+border-radius: 28px;
+margin-top:8px;
+`
+export const  FilterWrapper2 = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+width: 36px;
+height: 36px;
+background: #FFFFFF;
+box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
+border-radius: 18px;
+`
+export const FilterIcon = styled.img`
+
 `
 

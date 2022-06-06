@@ -68,12 +68,19 @@ opacity: 0.5;
  line-height: 18px;
  color: #2D3A45;
  text-decoration:none;
-
+ margin:0 24px 20px 0;
+ height: 48px;
+ padding-right:120px;
+ padding-left:20px;
+ background: ${({active})=> active && '#FCB600;'};
+ color: ${({active})=> active && 'white;'};
+ border-radius: 0px 6px 6px 0px;
 
 
 
  .icon{
      padding-right:10px;
+     float:left;
      width:34px;
      height:34px;
      padding:10px;
@@ -86,12 +93,8 @@ opacity: 0.5;
  export const Item = styled.div`
  display:flex;
  align-items:center;
- margin:0 24px 20px 0;
- height: 48px;
- padding-left:20px;
- background: ${({active})=> active && '#FCB600;'};
- color: ${({active})=> active && 'white;'};
- border-radius: 0px 6px 6px 0px;
+//  justify-content: center;
+//  width:100%;
  `
 
 

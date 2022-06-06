@@ -36,12 +36,14 @@ const[isActive, setActive] = useState(1);
 
             sidebar.map(({id,title,path,Icon})=>{
               return(
-                <Item key={id} onClick = {()=>setActive(id)}  active = {isActive === id}  >
-                      <Link key={id} to={path}  >
-                        <Icon className='icon' src = {Icon} />
-                          {title}
-                      </Link>
-                </Item>
+   
+                   <Item>
+                   <Link key={id} to={path} onClick = {()=>setActive(id)}  active = {isActive === id} >
+                     <Icon className='icon' src = {Icon} />
+                       {title}
+                   </Link>
+                   </Item>
+ 
               )
             })
 

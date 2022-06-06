@@ -8,6 +8,8 @@ import {ReactComponent as buyurtmalar}  from '../assets/icons/buyurtmalar.svg';
 import {ReactComponent as kategoriyalar}  from '../assets/icons/kategoriyalar.svg';
 import{ReactComponent as hodimlar}  from '../assets/icons/hodimlar.svg';
 import Buyurtmalar from "../page/Buyurtmalar";
+import Mahsulotlar from "../page/Maxsulotlar";
+import Kategoriyalar1 from "../page/Kategoriyalar";
 
 export const sidebar  = [
     {
@@ -24,7 +26,7 @@ export const sidebar  = [
     path:'/maxsulotlar',
     title: 'Mahsulotlar',
     Icon: mahsulotlar,
-    Component: Generic,
+    Component: Mahsulotlar,
     hidden:false,
 
 },
@@ -33,7 +35,7 @@ export const sidebar  = [
     path:'/kategoriyalar',
     title: 'Kategoriyalar',
     Icon: kategoriyalar,
-    Component: Generic,
+    Component: Kategoriyalar1   ,
     hidden:false,
 
 },
