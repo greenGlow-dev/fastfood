@@ -37,7 +37,7 @@ const[isActive, setActive] = useState(1);
             sidebar.map(({id,title,path,Icon})=>{
               return(
    
-                   <Item>
+                   <Item key={id}>
                    <Link key={id} to={path} onClick = {()=>setActive(id)}  active = {isActive === id} >
                      <Icon className='icon' src = {Icon} />
                        {title}

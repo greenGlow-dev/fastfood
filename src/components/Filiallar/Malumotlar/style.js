@@ -35,7 +35,7 @@ width: 105px;
 height: 20px;
 margin:25px 90px;
 font-family: 'SFProDisplay';
-font-size: 15px;
+font-size: 13px;
 line-height: 15px;
 color: #2D3A45;
 

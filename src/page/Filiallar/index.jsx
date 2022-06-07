@@ -1,16 +1,15 @@
 import React from 'react'
-import Buyurtma from '../../components/Buyurtmalar'
-import Mahsulot from '../../components/Mahsulotlar';
+import Filial from '../../components/Filiallar'
 
 
 
 
-export const Mahsulotlar = () => {
+export const Filiallar = () => {
 
 
   return (
-  <Mahsulot/>
+  <Filial/>
   )
   
 }
-export default Mahsulotlar ;
+export default Filiallar ;

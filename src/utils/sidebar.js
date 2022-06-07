@@ -10,6 +10,8 @@ import{ReactComponent as hodimlar}  from '../assets/icons/hodimlar.svg';
 import Buyurtmalar from "../page/Buyurtmalar";
 import Mahsulotlar from "../page/Maxsulotlar";
 import Kategoriyalar1 from "../page/Kategoriyalar";
+import Filiallar from "../page/Filiallar";
+
 
 export const sidebar  = [
     {
@@ -44,7 +46,7 @@ export const sidebar  = [
     path:'/filiallar',
     title: 'Filiallar',
     Icon: filiallar,
-    Component: Generic,
+    Component: Filiallar,
     hidden:false,
 
 },
