@@ -25,13 +25,14 @@ export const Tab = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
+margin-right:15px;
 `
 Tab.Icon = styled.img`
 width: 50px;
 height: 50px
 `
 Tab.Information = styled.div`
-width: 105px;
+width: 85px;
 height: 20px;
 margin:25px 90px;
 font-family: 'SFProDisplay';
@@ -50,7 +51,7 @@ height: 50px;
 background: #EDEFF3;
 border-radius: 28px;
 margin-top:8px;
-margin-left: 20px;
+margin-left: 30px;
 
 &:hover{
     background-color: red;

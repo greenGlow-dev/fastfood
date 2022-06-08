@@ -15,12 +15,13 @@ export const Tab = styled.div`
 display:flex;
 align-items:center;
 justify-content:center;
-width: 120px;
-margin:10px 75px;
+width: 100px;
+margin:15px 75px;
 border-left:1px solid #8D9BA8;
 height: 23px;
 font-family: 'SFProDisplay';
-font-size: 16px;
+font-size: 14px;
+font-weight: bold;
 line-height: 13px;
 text-transform: uppercase;
 color: #2D3A45;

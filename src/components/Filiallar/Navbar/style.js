@@ -20,7 +20,8 @@ width:100%;
 export const Wrapper = styled.div`
 display:flex;
 align-items:${({align})=>'center'};
-width: ${({align})=>(align ? '600px': '100%')};
+width:300px;
+width: ${({align})=>(align ? '300px': '100%')};
 // border: ${({align})=> align && '2px solid #E5E5E5'};
 justify-content:center;
 height:80px;
@@ -32,7 +33,7 @@ background:white;
     flex:1;
     display: ${({order})=> order === 'third'&& 'none'}
 }
-
+position:relative;
 `
 export const  Plus = styled.div`
 display:flex;
@@ -81,6 +82,18 @@ display: flex;
 align-items:center;
 
 `
+Tab.input = styled.input`
+width: 50%;
+border:none;
+display:flex;
+align-items:center;
+padding-let:20px;
+padding:6px;
+height: 50px;
+background: #EDEFF3;
+border-radius: 24px;
+outline: none;
+`
 export const IconWrapper = styled.div`
 display: flex;
 align-items: center;
@@ -94,20 +107,11 @@ transition: all .28s;
 
 `
 Tab.Search = styled.img`
+position:absolute;
+left:69%;
 width: 17.22px;
 height: 14.22px;
-left: 817px;
-top: 32px;
-margin-right: 20px;
-`
-Tab.SearchText = styled.div`
-font-family: 'SFProDisplay';
-font-size: 13px;
-line-height: 15px;
-color: #2D3A45;
-mix-blend-mode: normal;
-opacity: 0.4;
-margin-left: 20px;
+cursor:pointer;
 `
 
 export const  FilterWrapper1 = styled.div`

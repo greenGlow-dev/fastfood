@@ -119,6 +119,7 @@ height: 50px;
 background: #EDEFF3;
 border-radius: 28px;
 margin-top:8px;
+cursor:pointer;
 `
 export const  FilterWrapper2 = styled.div`
 display:flex;

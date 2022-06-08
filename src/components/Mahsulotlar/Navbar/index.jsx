@@ -4,10 +4,12 @@ import NavbarIcon1 from '../../../assets/icons/NavbarIcon1.svg'
 import NavbarIcon2 from '../../../assets/icons/NavbarIcon2.svg'
 import qidiruv from '../../../assets/icons/qidiruv.svg'
 import filter from '../../../assets/icons/filter.svg'
+import FilterCard from './filterCard/index'
 
 export const Navbar = () => {
   const [isActive, setActive] = useState('Yangi')
   const [isTabActive, setTabActive] = useState('birinchi')
+  const [isAddCard, setAddCard] = useState(false)
   return (
     <Container>
       <Wrapper align   order='first' >
@@ -32,15 +34,17 @@ export const Navbar = () => {
       </Wrapper>
       <Wrapper align  order = 'third' >
              
-                    <FilterWrapper1>
+                    <FilterWrapper1  onClick={()=>setAddCard(!isAddCard)} >
 
                            <FilterWrapper2>
                                     <FilterIcon src={filter} />
                           </FilterWrapper2>
 
                     </FilterWrapper1>
+                 
               
-      </Wrapper>
+         </Wrapper>
+         <FilterCard order = {isAddCard} />
     </Container>
   )
 }

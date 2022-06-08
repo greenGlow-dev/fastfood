@@ -13,7 +13,7 @@ export const Navbar = () => {
       <Wrapper align   order='first' >
 
       <Plus>+</Plus>
-      <Title>Yangi buyurtma qo'shish</Title>
+      <Title>Yangi filial qo'shish</Title>
       <TabClone>
         <IconWrapper    onClick={()=>setTabActive('birinchi')} active = {isTabActive === 'birinchi' } >
      <Tab.Icon  src={NavbarIcon1} />
@@ -25,22 +25,13 @@ export const Navbar = () => {
 
       </Wrapper> 
       <Wrapper     order='second'>
-        <Tab>
-            <Tab.SearchText>Qidiruv</Tab.SearchText>
+   
+          <Tab.input  placeholder='Qidiruv' />
+
             <Tab.Search src={qidiruv} />
-        </Tab>
+      
       </Wrapper>
-      <Wrapper align  order = 'third' >
-             
-                    <FilterWrapper1>
-
-                           <FilterWrapper2>
-                                    <FilterIcon src={filter} />
-                          </FilterWrapper2>
-
-                    </FilterWrapper1>
-              
-      </Wrapper>
+  
     </Container>
   )
 }
