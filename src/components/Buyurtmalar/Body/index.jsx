@@ -5,10 +5,12 @@ import ProductCard from '../ProductCard/index'
 export const Body = () => {
   return (
     <Container>
+      
         <Wrapper><ProductCard/></Wrapper>
         <Wrapper><ProductCard/></Wrapper>
         <Wrapper><ProductCard/></Wrapper>
         <Wrapper><ProductCard/></Wrapper>
+       
     </Container>
   )
 }

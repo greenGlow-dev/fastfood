@@ -48,7 +48,11 @@ border: 1px solid #EDEFF3;
 border-radius: 2px;
 width: 16px;
 height: 16px;
-background:red;
+.radio{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 `
 Check.InputLabel = styled.label`
 display: flex;

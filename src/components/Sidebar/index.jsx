@@ -42,7 +42,7 @@ const[isActive, setActive] = useState(1);
                      <Icon className='icon' src = {Icon} />
                        {title}
                    </Link>
-                   </Item>
+                   </Item>  
  
               )
             })

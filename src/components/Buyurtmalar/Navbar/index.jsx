@@ -2,15 +2,17 @@ import React,{useState} from 'react'
 import { Container, Wrapper , Plus , Title, Tab,IconWrapper, TabClone} from './style'
 import NavbarIcon1 from '../../../assets/icons/NavbarIcon1.svg'
 import NavbarIcon2 from '../../../assets/icons/NavbarIcon2.svg'
+import AddOrder from '../AddOrder/index.jsx'
 
 export const Navbar = () => {
   const [isActive, setActive] = useState('Yangi')
   const [isTabActive, setTabActive] = useState('birinchi')
+  const [isAddCard, setAddCard] = useState(false)
   return (
     <Container>
       <Wrapper align   order='first' >
 
-      <Plus>+</Plus>
+      <Plus onClick={()=>setAddCard(!isAddCard)} >+</Plus>
       <Title>Yangi buyurtma qo'shish</Title>
       <TabClone>
         <IconWrapper    onClick={()=>setTabActive('birinchi')} active = {isTabActive === 'birinchi' } >
@@ -40,6 +42,7 @@ export const Navbar = () => {
      </IconWrapper>
       </Tab>
       </Wrapper>
+      <AddOrder order = {isAddCard} />
     </Container>
   )
 }
