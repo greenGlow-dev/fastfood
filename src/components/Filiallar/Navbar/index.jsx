@@ -1,10 +1,11 @@
-      import React,{useState} from 'react'
+      import React,{useState, useContext  } from 'react'
       import { Container, Wrapper ,NotVisible, Plus , Title, Tab,IconWrapper, FilterIcon, TabClone, FilterWrapper1, FilterWrapper2} from './style'
       import NavbarIcon1 from '../../../assets/icons/NavbarIcon1.svg'
       import NavbarIcon2 from '../../../assets/icons/NavbarIcon2.svg'
       import qidiruv from '../../../assets/icons/qidiruv.svg'
       import filter from '../../../assets/icons/filter.svg'
       import Malumotlar from '../Malumotlar'
+      import UserContext from '../../context/UserContext'
 
       export const Navbar = () => {
         const [isActive, setActive] = useState('Yangi')
@@ -13,14 +14,14 @@
 
 
     
-     
+        const {user, setUser} = useContext(UserContext);
+      //  console.log(user)
 
            
 
         return (
           <Container>
             <Wrapper align   order='first' >
-
             <Plus>+</Plus>
             <Title>Yangi filial qo'shish</Title>
             <TabClone>
@@ -35,7 +36,7 @@
             </Wrapper> 
             <Wrapper     order='second'>
         
-                <Tab.input  placeholder='Qidiruv' />
+                <Tab.input  placeholder='Qidiruv' onChange={(e) => setUser(e.target.value)}/>
 
                   <Tab.Search src={qidiruv}  />
             
