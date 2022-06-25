@@ -45,7 +45,7 @@ border-radius:50%;
 background: #20D472;
 font-size:20px;
 font-weight:bold;
-margin-right:14px;
+margin-right:14 px;
 cursor:pointer
 `
 export const  Title = styled.div`
@@ -100,14 +100,33 @@ left: 817px;
 top: 32px;
 margin-right: 20px;
 `
-Tab.SearchText = styled.div`
-font-family: 'SFProDisplay';
-font-size: 13px;
-line-height: 15px;
-color: #2D3A45;
-mix-blend-mode: normal;
-opacity: 0.4;
-margin-left: 20px;
+
+Tab.input = styled.input`
+width: 90%;
+border:none;
+display:flex;
+align-items:center;
+padding-let:20px;
+padding:6px;
+height: 50px;
+background: #EDEFF3;
+border-radius: 24px;
+outline: none;
+
+&:focus {
+    outline: none;
+    // box-shadow: 1px 0px 2px #20D472;
+    border:1px solid #20D472;
+}
+`
+
+
+Tab.Search = styled.img`
+position:absolute;
+left:72%;
+width: 17.22px;
+height: 14.22px;
+cursor:pointer;
 `
 
 export const  FilterWrapper1 = styled.div`

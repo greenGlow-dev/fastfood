@@ -6,15 +6,23 @@
       import filter from '../../../assets/icons/filter.svg'
       import Malumotlar from '../Malumotlar'
       import UserContext from '../../context/UserContext'
+      import { filial } from '../../../utils/filial';
 
       export const Navbar = () => {
         const [isActive, setActive] = useState('Yangi')
         const [isTabActive, setTabActive] = useState('birinchi')
         // const [isInput, setInput] = useState('bosh')
 
+        const filtered = () =>{
+
+              let obj =  filial.filter((item) => item.filialNameUz.toUpperCase().includes(user.toUpperCase()))
+
+              setFilial(obj)
+             
+                 }
 
     
-        const {user, setUser} = useContext(UserContext);
+        const {user, setUser, runFunc, setFunc, setFilial} = useContext(UserContext);
       //  console.log(user)
 
            
@@ -36,7 +44,7 @@
             </Wrapper> 
             <Wrapper     order='second'>
         
-                <Tab.input  placeholder='Qidiruv' onChange={(e) => setUser(e.target.value)}/>
+                <Tab.input  placeholder='Qidiruv' autoFocus  focusable='false' onKeyUp={() => filtered()}  onChange={(e) => setUser(e.target.value)}/>
 
                   <Tab.Search src={qidiruv}  />
             

@@ -14,52 +14,19 @@ import Navbar from "../Navbar/index";
 import UserContext from '../../context/UserContext'
 export const Malumotlar = () => {
     
-    const {user, setUser} = useContext(UserContext);
-    const [newArray, setNewArray] = useState(filial)
-          
-
-          function myFunction() {
-           
+    const {user, setUser, useFilial, setFilial} = useContext(UserContext);
+    
 
 
-            filial.map((item, index)=>{
-              console.log(item)
-
-
-               
-//             let newData     = [];
-//             let filterValue = user;
-
-
-// for (item) {
-//   if (item[value].filialNameUz !== filterValue) {
-//     newData.push(data[value]);
-//   }
-// }
-         
-
-                if(user == item.filialNameUz) {
-                  
-              //  item.filter((e)=>{  console.log(e)   })
-                  // var obj = item;
-                  // console.log(obj);
-                  setNewArray([item])
-
-                }
-
-
-                            })
-
-              
-          }
+        
   
         
 return (
   <div>
-    <button onClick={()=> myFunction()} >adada</button>
-    {newArray.map(({ id, filialNameUz, filialNameRu, target, time }) => {
+   
+    {useFilial.map(({ id, filialNameUz, filialNameRu, target, time }) => {
       return (
-        <Container id="filialContainer" key={id}>
+        <Container key={id}>
           <Tab.Information>{filialNameUz}</Tab.Information>
           <Tab.Information>{filialNameRu}</Tab.Information>
           <Tab.Information>{target}</Tab.Information>

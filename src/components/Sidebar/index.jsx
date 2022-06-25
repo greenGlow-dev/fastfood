@@ -9,7 +9,12 @@ import {sidebar} from '../../utils/sidebar'
 
 export const Sidebar = () => {
 
-const[isActive, setActive] = useState(1);
+const[isActive, setActive] = useState(localStorage.getItem('id'));
+
+const lablab = (id) => {
+localStorage.setItem('id', id);
+setActive(localStorage.getItem('id'));
+}
 
   return (
     <Container>
@@ -38,7 +43,7 @@ const[isActive, setActive] = useState(1);
               return(
    
                    <Item key={id}>
-                   <Link key={id} to={path} onClick = {()=>setActive(id)}  active = {isActive === id} >
+                   <Link key={id} to={path} onClick = {()=>lablab(id)}  active = {isActive == id} >
                      <Icon className='icon' src = {Icon} />
                        {title}
                    </Link>

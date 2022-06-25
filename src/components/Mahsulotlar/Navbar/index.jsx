@@ -5,11 +5,16 @@ import NavbarIcon2 from '../../../assets/icons/NavbarIcon2.svg'
 import qidiruv from '../../../assets/icons/qidiruv.svg'
 import filter from '../../../assets/icons/filter.svg'
 import FilterCard from './filterCard/index'
+import kategoriya from '../../../utils/kategoriya'
+
 
 export const Navbar = () => {
   const [isActive, setActive] = useState('Yangi')
   const [isTabActive, setTabActive] = useState('birinchi')
   const [isAddCard, setAddCard] = useState(false)
+
+    
+
   return (
     <Container>
       <Wrapper align   order='first' >
@@ -27,10 +32,11 @@ export const Navbar = () => {
 
       </Wrapper> 
       <Wrapper     order='second'>
-        <Tab>
-            <Tab.SearchText>Qidiruv</Tab.SearchText>
-            <Tab.Search src={qidiruv} />
-        </Tab>
+
+      <Tab.input  placeholder='Qidiruv' autoFocus />
+
+      <Tab.Search src={qidiruv}  />
+
       </Wrapper>
       <Wrapper align  order = 'third' >
              

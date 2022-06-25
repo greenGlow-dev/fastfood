@@ -1,5 +1,5 @@
     import styled from "styled-components"
-
+    
     const getOrder = ({order}) =>{
         switch(order){
             case 'first': return 1;
@@ -93,7 +93,17 @@
     background: #EDEFF3;
     border-radius: 24px;
     outline: none;
+
+    &:focus {
+        outline: none;
+        // box-shadow: 1px 0px 2px #20D472;
+        border:1px solid #20D472;
+    }
     `
+
+  
+    
+
     export const IconWrapper = styled.div`
     display: flex;
     align-items: center;
