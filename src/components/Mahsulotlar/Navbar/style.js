@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-const getOrder = ({order}) =>{
-    switch(order){
+const getOrder = ({ order }) => {
+    switch (order) {
         case 'first': return 1;
         case 'second': return 2;
         case 'third': return 3;
-        default:return 1;
+        default: return 1;
     }
 }
 
@@ -19,9 +19,9 @@ width:100%;
 `
 export const Wrapper = styled.div`
 display:flex;
-align-items:${({align})=>'center'};
-width: ${({align})=>(align ? '600px': '100%')};
-// border: ${({align})=> align && '2px solid #E5E5E5'};
+align-items:${({ align }) => 'center'};
+width: ${({ align }) => (align ? '600px' : '100%')};
+// border: ${({ align }) => align && '2px solid #E5E5E5'};
 justify-content:center;
 height:80px;
 padding:22px 40px;
@@ -30,11 +30,11 @@ background:white;
     order: ${getOrder};
     width:100%;
     flex:1;
-    display: ${({order})=> order === 'third'&& 'none'}
+    display: ${({ order }) => order === 'third' && 'none'}
 }
 
 `
-export const  Plus = styled.div`
+export const Plus = styled.div`
 display:flex;
 align-items:center;
 color:white;
@@ -48,7 +48,7 @@ font-weight:bold;
 margin-right:14 px;
 cursor:pointer
 `
-export const  Title = styled.div`
+export const Title = styled.div`
 font-family: 'SFProDisplay';
 font-size: 12px;
 line-height: 16px;
@@ -87,7 +87,7 @@ align-items: center;
 justify-content: center;
 width: 36px;
 height: 36px;
-background: ${({active})=> active && '#FFFFFF;'}  
+background: ${({ active }) => active && '#FFFFFF;'}  
 box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
 border-radius: 18px;
 transition: all .28s;
@@ -129,7 +129,7 @@ height: 14.22px;
 cursor:pointer;
 `
 
-export const  FilterWrapper1 = styled.div`
+export const FilterWrapper1 = styled.div`
 display:flex;
 align-items:center;
 justify-content: center;
@@ -140,7 +140,7 @@ border-radius: 28px;
 margin-top:8px;
 cursor:pointer;
 `
-export const  FilterWrapper2 = styled.div`
+export const FilterWrapper2 = styled.div`
 display:flex;
 align-items:center;
 justify-content:center;

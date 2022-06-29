@@ -7,7 +7,7 @@ export const Kategoriya = () => {
 
         <Tab noborder >maxsulot</Tab>
         <Tab>Kategoriya</Tab>
-        <Tab>Narxi</Tab>
+        {/* <Tab>Narxi</Tab> */}
         <Tab>Qo'shimcha</Tab>
         <Tab>Action</Tab>
         

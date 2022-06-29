@@ -11,7 +11,7 @@ import pen from "../../../assets/icons/pen.svg";
 import garbage from "../../../assets/icons/garbage.svg";
 import target1 from "../../../assets/icons/target.svg";
 import Navbar from "../Navbar/index";
-import UserContext from '../../context/UserContext'
+import UserContext from '../../../context/UserContext'
 export const Malumotlar = () => {
     
     const {user, setUser, useFilial, setFilial} = useContext(UserContext);
