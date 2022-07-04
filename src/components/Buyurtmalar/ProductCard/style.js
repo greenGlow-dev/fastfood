@@ -4,20 +4,27 @@ import styled from "styled-components"
 export const Container = styled.div`
 display:flex;
 flex-direction:column;
-width:300px;
+width:250px;
 height: 400px;
 background: #FFFFFF;
 box-shadow: 0px 20px 25px rgba(176, 177, 181, 0.432802);
 border-radius: 6px;
 padding:0px 20px 20px 20px;
+// border:1px solid black;
+@media(max-width:1300px){
+    width:230px;
+    height: 400px;
+}
+
+
 `
 
 
 export const Wrapper = styled.div`
 display:flex;
 justify-content:space-between;
-padding-bottom:25px;
-padding-top:25px;
+padding-bottom:20px;
+padding-top:20px;
 border-bottom: 1px solid #d9d7d7;
 flex-direction:${({column}) => column && 'column'};
 margin-top:${({column}) => column && '-10px'}
@@ -43,6 +50,11 @@ line-height: 16px;
 letter-spacing: 0.466667px;
 border-radius: 18px;
 color:white;
+@media(max-width:1300px){
+    width: 50px;
+    height: 20px;
+    font-size: 12px;
+}
 `
 export const IconWrapper  = styled.div`
 display:flex;
@@ -79,10 +91,14 @@ height:24px;
 `
 Info.Name = styled.div`
 font-family: 'SFProDisplay';
-font-size: 22px;
-line-height: 20px;
+font-size: 20px;
+line-height: 18px;
 letter-spacing: 0.533333px;
 color: #2D3A45;
+@media(max-width:1300px){
+    font-size: 17px;
+    line-height: 15px;
+}
 `
 Info.Number = styled.div`
 font-family: 'SFProDisplay';
@@ -93,6 +109,10 @@ color: #2D3A45;
 padding:10px;
 mix-blend-mode: normal;
 opacity: 0.7;
+@media(max-width:1300px){
+    font-size: 14px;
+    line-height: 15px;
+}
 `
 Info.Total = styled.div`
 font-family: 'SFProDisplay';

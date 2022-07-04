@@ -32,14 +32,14 @@ export const Navbar = () => {
       <Wrapper align order='first' >
         <Plus>+</Plus>
         <Title>Yangi filial qo'shish</Title>
-        <TabClone>
+        {/* <TabClone>
           <IconWrapper onClick={() => setTabActive('birinchi')} active={isTabActive === 'birinchi'} >
             <Tab.Icon src={NavbarIcon1} />
           </IconWrapper>
           <IconWrapper onClick={() => setTabActive('ikkinchi')} active={isTabActive === 'ikkinchi'} r>
             <Tab.Icon src={NavbarIcon2} />
           </IconWrapper>
-        </TabClone>
+        </TabClone> */}
 
       </Wrapper>
       <Wrapper order='second'>

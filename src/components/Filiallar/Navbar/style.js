@@ -27,12 +27,12 @@
     height:80px;
     padding:22px 40px;
     background:white;
-    @media(max-width:1680px){
-        order: ${getOrder};
-        width:100%;
-        flex:1;
-        display: ${({order})=> order === 'third'&& 'none'}
-    }
+    // @media(max-width:1680px){
+    //     order: ${getOrder};
+    //     width:100%;
+    //     flex:1;
+    //     display: ${({order})=> order === 'third'&& 'none'}
+    // }
     position:relative;
     `
     export const  Plus = styled.div`
@@ -69,11 +69,11 @@
     `
     export const TabClone = styled(Tab)`
     display:none;
-    @media(max-width:1680px){
-        display:flex;
-        width:100px;
-        margin-left: auto;
-    }
+    // @media(max-width:1680px){
+    //     display:flex;
+    //     width:100px;
+    //     margin-left: auto;
+    // }
     `
 
 

@@ -10,6 +10,7 @@ export const Body = () => {
         <Wrapper><ProductCard/></Wrapper>
         <Wrapper><ProductCard/></Wrapper>
         <Wrapper><ProductCard/></Wrapper>
+      
        
     </Container>
   )

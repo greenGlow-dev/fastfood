@@ -1,5 +1,11 @@
     import styled from "styled-components"
 
+    export const All  = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    `
+
     export const Container = styled.div`
     position: relative;
     display:flex;

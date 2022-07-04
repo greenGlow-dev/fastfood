@@ -5,10 +5,10 @@ export const Kategoriya = () => {
   return (
     <Container>
 
-        <Tab noborder >maxsulot</Tab>
+        <Tab noborder = {true} >Maxsulot</Tab>
         <Tab>Kategoriya</Tab>
-        {/* <Tab>Narxi</Tab> */}
         <Tab>Qo'shimcha</Tab>
+        <Tab>Narxi</Tab>
         <Tab>Action</Tab>
         
     </Container>

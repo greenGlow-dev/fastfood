@@ -7,6 +7,8 @@ import Notfound from "../components/Notfound";
 import UserContext from '../context/UserContext'
 import { filial } from '../utils/filial'
 import { kategoriya } from '../utils/kategoriya'
+import './root.css'
+
 
 
 export const Root = () => {
@@ -25,8 +27,10 @@ const [useProduct, setProduct] = useState(kategoriya);
 
             <BrowserRouter>
            
+                  <div id='sidebar'  >
 
-                  <Routes>
+                 
+                  <Routes >   
 
                 
               {
@@ -39,8 +43,11 @@ const [useProduct, setProduct] = useState(kategoriya);
               }
 
                  </Routes>
+                 </div>
 
-              <Routes>
+                 <div id='body'>
+
+              <Routes   >
     
 {
             sidebar.map(({id,path, Component})=>{
@@ -54,6 +61,8 @@ const [useProduct, setProduct] = useState(kategoriya);
                   <Route  path="*" element={<Sidebar />} />
 
              </Routes>
+
+             </div>
 
 
             </BrowserRouter>

@@ -12,27 +12,20 @@ const getOrder = ({order}) =>{
 export const Container = styled.div`
 display:flex;
 width:100%;
-@media(max-width:1680px){
-    flex-direction:column
-}
- }
+justify-content:center;
 `
 export const Wrapper = styled.div`
 display:flex;
 align-items:${({align})=>'center'};
 width: ${({align})=>(align ? '600px': '100%')};
-// border: ${({align})=> align && '2px solid #E5E5E5'};
+width: ${({ plus }) => plus && '20%'};
+width: ${({ search }) => search && '60%'};
+border-left: ${({plus})=>plus&&'2px solid whitesmoke;'};
+border-right: ${({plus})=>plus&&'2px solid whitesmoke;'};
 justify-content:center;
 height:80px;
 padding:22px 40px;
 background:white;
-@media(max-width:1680px){
-    order: ${getOrder};
-    width:100%;
-    flex:1;
-    display: ${({order})=> order === 'third'&& 'none'}
-}
-
 `
 export const  Plus = styled.div`
 display:flex;
@@ -59,13 +52,43 @@ display:flex;
 align-items:center;
 padding:6px;
 justify-content:space-between;
-width:100%;
+// width:100%;
 text-align:center;
 height: 50px;
 background: #EDEFF3;
 border-radius: 24px;
 
 `
+
+
+Tab.input = styled.input`
+width: 90%;
+border:none;
+display:flex;
+align-items:center;
+padding-let:20px;
+padding:6px;
+height: 50px;
+background: #EDEFF3;
+border-radius: 24px;
+outline: none;
+
+&:focus {
+    outline: none;
+    // box-shadow: 1px 0px 2px #20D472;
+    border:1px solid #20D472;
+}
+`
+
+
+Tab.Search = styled.img`
+position:absolute;
+left:53%;
+width: 17.22px;
+height: 14.22px;
+cursor:pointer;
+`
+
 export const TabClone = styled(Tab)`
 display:none;
 @media(max-width:1680px){
@@ -93,13 +116,7 @@ border-radius: 18px;
 transition: all .28s;
 
 `
-Tab.Search = styled.img`
-width: 17.22px;
-height: 14.22px;
-left: 817px;
-top: 32px;
-margin-right: 20px;
-`
+
 Tab.SearchText = styled.div`
 font-family: 'SFProDisplay';
 font-size: 13px;
@@ -119,6 +136,7 @@ height: 50px;
 background: #EDEFF3;
 border-radius: 28px;
 margin-top:8px;
+cursor:pointer;
 `
 export const  FilterWrapper2 = styled.div`
 display:flex;

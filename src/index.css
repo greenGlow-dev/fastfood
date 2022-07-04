@@ -14,3 +14,7 @@
   font-weight: bold;
   src: url("./utils/cssFonts/SFPRODISPLAYBOLD.OTF") format("opentype");
 }
+
+.container{
+  width: 100%;
+}

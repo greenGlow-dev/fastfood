@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container,RemoweWrapper1, RemoweWrapper2, Tab} from './style'
+import {Container,RemoweWrapper1, RemoweWrapper2,All, Tab} from './style'
 import {kategoriya} from '../../../utils/bigKategory'
 import pen from '../../../assets/icons/pen.svg'
 import garbage from '../../../assets/icons/garbage.svg'
@@ -9,7 +9,7 @@ export const Malumotlar = () => {
 
  
 
-      <>
+      <All>
 
       {
 
@@ -35,7 +35,7 @@ kategoriya.map(({id,categoryUz,categoryRu,mainCategory})=>{
         })
       }
       
-      </>
+      </All>
 
         
 

@@ -8,8 +8,15 @@ import Root from './root/';
 
 ReactDOM.render(
   <React.StrictMode>
+
+  <div  className='container'>
+
+ 
+           <Root />
+           
+
+    </div>
    
-    <Root />
     
   </React.StrictMode>,
   document.getElementById('root')

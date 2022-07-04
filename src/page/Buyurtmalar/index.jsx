@@ -1,5 +1,6 @@
 import React from 'react'
 import Buyurtma from '../../components/Buyurtmalar'
+import { Container } from './style'
 
 
 
@@ -8,8 +9,12 @@ export const Buyurtmalar = () => {
 
 
   return (
-  <Buyurtma/>
+
+    <Container>
+      <Buyurtma />
+    </Container>
+
   )
-  
+
 }
 export default Buyurtmalar;

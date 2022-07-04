@@ -5,6 +5,7 @@ RemoweWrapper1,
 NotVisible,
 RemoweWrapper2,
 Tab,
+All
 } from "./style";
 import { filial } from "../../../utils/filial";
 import pen from "../../../assets/icons/pen.svg";
@@ -22,7 +23,7 @@ export const Malumotlar = () => {
   
         
 return (
-  <div>
+  <All>
    
     {useFilial.map(({ id, filialNameUz, filialNameRu, target, time }) => {
       return (
@@ -54,7 +55,7 @@ return (
     <NotVisible>
       <Navbar />
     </NotVisible>
-  </div>
+  </All>
 );
 };
 

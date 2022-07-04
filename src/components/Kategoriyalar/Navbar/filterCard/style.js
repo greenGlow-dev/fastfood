@@ -96,7 +96,6 @@ border-radius: 6px;
 font-size:12px;
 padding:0px 10px; 
 outline:none;
-transtion:06s;
 `
 export const Option = styled.option`
 height: 28px;
@@ -109,5 +108,5 @@ letter-spacing: 0.4px;
 color: #2D3A45;
 mix-blend-mode: normal;
 opacity: 0.6;
-transition: .9s;    
+
 `
