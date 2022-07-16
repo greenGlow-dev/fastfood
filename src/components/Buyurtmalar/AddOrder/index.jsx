@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Wrapper, Timer, Info, ItemWrap,Items,IconWrapper,RemoweWrapper1,RemoweWrapper2} from './style'
+import { Container, Wrapper, Timer, Info, ItemWrap,Items,IconWrapper,RemoweWrapper1,RemoweWrapper2} from './style'
 import save from '../../../assets/icons/save.svg'
 import time from '../../../assets/icons/clock.svg'
 import user from '../../../assets/icons/user.svg'
@@ -9,6 +9,8 @@ import remove from '../../../assets/icons/x.svg'
 import check from '../../../assets/icons/check.svg'
 export const AddOrder = (props) => {
   return (
+
+
     <Container order = {props.order} >
          <Wrapper>
 

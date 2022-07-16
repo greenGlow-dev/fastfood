@@ -5,6 +5,11 @@
     flex-direction:column;
     align-items:center;
     width:100%;
+    height:75vh;
+    overflow-y: scroll;
+    @media(max-width:1300px){
+        height:70vh;
+    }
     `
 
     export const Container = styled.div`
@@ -47,19 +52,22 @@
     height: 50px
     `
     Tab.Information = styled.div`
-    width: 65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 175px;
     height: 20px;
-    margin:25px 75px;
+    margin:25px 45px;
     font-family: 'SFProDisplay';
     font-size: 13px;
     line-height: 15px;
     color: #2D3A45;
-
     @media(max-width:1300px){
         font-size: 11px;
-        width: 25px;
-        margin:15px 75px;
+        width: 125px;
+        margin:15px 35px;
     }
+    color:${({green})=> green&&'green'}
 
     `
 

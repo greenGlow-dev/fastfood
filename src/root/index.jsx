@@ -6,6 +6,7 @@ import { sidebar } from "../utils/sidebar";
 import Notfound from "../components/Notfound";
 import UserContext from '../context/UserContext'
 import { filial } from '../utils/filial'
+import { mijozlar } from '../utils/mijozlar'
 import { kategoriya } from '../utils/kategoriya'
 import './root.css'
 
@@ -16,13 +17,15 @@ export const Root = () => {
 const [user, setUser] = useState('salom');
 const [user1, setUser1] = useState('salom');
 // const [sideBar, setSidebar] = useState('');
-
+const [usetoggleCard, settoggleCard] = useState(false);
 const [useFilial, setFilial] = useState(filial);
+const [useUsers, setUsers] = useState(mijozlar);
 const [useProduct, setProduct] = useState(kategoriya);
+console.log(window.innerWidth)
 
   return( 
   
-      <UserContext.Provider value={{user, setUser, user1, setUser1, useProduct, setProduct, useFilial ,setFilial}} >
+      <UserContext.Provider value={{user, setUser, user1, setUser1, useProduct, setProduct, useFilial ,setFilial,useUsers, setUsers, usetoggleCard,settoggleCard }} >
       <Container>
 
             <BrowserRouter>
@@ -30,24 +33,26 @@ const [useProduct, setProduct] = useState(kategoriya);
                   <div id='sidebar'  >
 
                  
-                  <Routes >   
+                        <Routes >   
 
-                
-              {
-                    sidebar.map(({id,path})=>{
-                          return(
-                                <Route  key={id} path={path} element={<Sidebar/>} />
-                              
-                          )
-                    })
-              }
+                  
+                  {
 
-                 </Routes>
+                    
+                        sidebar.map(({id,path})=>{
+                              return(
+                                    <Route  key={id} path={path} element={<Sidebar/>} />
+                                    
+                              )
+                        })
+                  }
+
+                  </Routes>
                  </div>
 
                  <div id='body'>
 
-              <Routes   >
+              <Routes >
     
 {
             sidebar.map(({id,path, Component})=>{
@@ -58,7 +63,7 @@ const [useProduct, setProduct] = useState(kategoriya);
                    })
 }
 
-                  <Route  path="*" element={<Sidebar />} />
+                
 
              </Routes>
 

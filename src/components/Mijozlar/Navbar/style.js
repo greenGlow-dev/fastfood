@@ -19,6 +19,7 @@ align-items:${({align})=>'center'};
 width: ${({align})=>(align ? '600px': '100%')};
 width: ${({ plus }) => plus && '20%'};
 width: ${({ search }) => search && '60%'};
+width: ${({ toggle }) => toggle && '100%'};
 border-left: ${({plus})=>plus&&'2px solid whitesmoke;'};
 border-right: ${({plus})=>plus&&'2px solid whitesmoke;'};
 justify-content:center;
@@ -127,3 +128,39 @@ margin-left: 20px;
 
 
 
+export const FilterWrapper1 = styled.div`
+display:flex;
+align-items:center;
+justify-content: center;
+width: 50px;
+height: 50px;
+background: #EDEFF3;
+border-radius: 28px;
+margin-top:8px;
+cursor:pointer;
+
+@media(max-width:1300px){
+    width: 45px;
+    height: 45px;
+}
+
+`
+export const FilterWrapper2 = styled.div`
+display:flex;
+align-items:center;
+justify-content:center;
+width: 36px;
+height: 36px;
+background: white;
+box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
+border-radius: 18px;
+
+@media(max-width:1300px){
+    width: 34px;
+    height: 34px;
+}
+
+`
+export const FilterIcon = styled.img`
+
+`

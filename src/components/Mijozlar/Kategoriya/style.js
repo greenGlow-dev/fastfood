@@ -22,7 +22,7 @@ border-left: ${({noborder})=>noborder &&'none;'};
 padding-left: ${({noborder})=>noborder &&'0px;'};
 height: 23px;
 font-family: 'SFProDisplay';
-font-size: 15px;
+font-size: 14px;
 font-weight: bold;
 line-height: 13px;
 text-transform: uppercase;

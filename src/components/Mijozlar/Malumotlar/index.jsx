@@ -15,7 +15,7 @@ import Navbar from "../Navbar/index";
 import UserContext from '../../../context/UserContext'
 export const Malumotlar = () => {
     
-    const {useFilial} = useContext(UserContext);
+    const {useUsers} = useContext(UserContext);
     
 
 
@@ -25,13 +25,13 @@ export const Malumotlar = () => {
 return (
   <All>
    
-    {useFilial.map(({ id, filialNameUz, filialNameRu, target, time }) => {
+    {useUsers.map(({ id, name, number, orderCount, status }) => {
       return (
         <Container key={id}>
-          <Tab.Information>{filialNameUz}</Tab.Information>
-          <Tab.Information>{filialNameRu}</Tab.Information>
-          <Tab.Information>{target}</Tab.Information>
-          <Tab.Information>{time}</Tab.Information>
+          <Tab.Information>{name}</Tab.Information>
+          <Tab.Information  >{number}</Tab.Information>
+          <Tab.Information >{orderCount}</Tab.Information>
+          <Tab.Information green = {true} >{status}</Tab.Information>
           <Tab>
             <RemoweWrapper1>
               <RemoweWrapper2>

@@ -29,12 +29,12 @@ export const Navbar = () => {
 
   return (
     <Container>
-      <Wrapper align order='first' plus = {true}  >
+      <Wrapper align order='first' plus={true}  >
         <Plus>+</Plus>
-        <Title>Yangi filial qo'shish</Title>
+        <Title>Yangi mijoz qo'shish</Title>
 
       </Wrapper>
-      <Wrapper order='second' search = {true}>
+      <Wrapper order='second' search={true}>
 
         <Tab.input placeholder='Qidiruv' autoFocus focusable='false' onKeyUp={() => filtered()} onChange={(e) => setUser(e.target.value)} />
 
@@ -43,9 +43,17 @@ export const Navbar = () => {
       </Wrapper>
 
 
-      <Wrapper >
+      <Wrapper toggle={true}>
 
-       
+        <FilterWrapper1>
+
+          <FilterWrapper2>
+
+            <FilterIcon src={filter} />
+
+          </FilterWrapper2>
+
+        </FilterWrapper1>
 
       </Wrapper>
 

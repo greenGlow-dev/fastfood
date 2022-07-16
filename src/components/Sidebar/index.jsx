@@ -1,6 +1,6 @@
  import React, { useState } from 'react'
 import { Container, LogoWrapper, TextWrap, Wrapper, Link, Item, Icon} from './style'
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/two.jpg'
 import {sidebar} from '../../utils/sidebar'
 
 

@@ -11,6 +11,8 @@ import Buyurtmalar from "../page/Buyurtmalar";
 import Mahsulotlar from "../page/Maxsulotlar";
 import Kategoriyalar1 from "../page/Kategoriyalar";
 import Filiallar from "../page/Filiallar";
+import Mijozlar from "../page/Mijozlar";
+import Kataloglar from "../page/Katalog/index";
 
 
 export const sidebar  = [
@@ -55,7 +57,7 @@ export const sidebar  = [
     path:'/mijozlar',
     title: 'Mijozlar',
     Icon: mijozlar,
-    Component: Generic,
+    Component: Mijozlar,
     hidden:false,
 
 },
@@ -82,7 +84,7 @@ export const sidebar  = [
     path:'/katalog',
     title: 'Katalog',
     Icon: katalog,
-    Component: Generic,
+    Component: Kataloglar,
     hidden:false,
 
 }

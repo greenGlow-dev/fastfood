@@ -58,8 +58,8 @@ export const  RemoweWrapper1 = styled.div`
 display:flex;
 align-items:center;
 justify-content: center;
-width: 50px;
-height: 50px;
+width: 45px;
+height: 45px;
 background: #EDEFF3;
 border-radius: 28px;
 margin-top:8px;
@@ -70,8 +70,8 @@ margin-left: 20px;
 }
 
 @media(max-width:1300px){
-    width: 50px;
-    height: 35px;
+    width: 49px;
+    height: 37px;
 };
 
 
@@ -80,16 +80,16 @@ export const  RemoweWrapper2 = styled.div`
 display:flex;
 align-items:center;
 justify-content: center;
-width: 40px;
-height: 40px;
+width: 38px;
+height: 38px;
 background: #FFFFFF;
 box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
 border-radius: 20px;
 cursor: pointer;
 @media(max-width:1300px){
-    width: 32px;
+    width: 30px;
     height: 30px;
-};
+}
 `
 
 

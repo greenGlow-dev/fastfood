@@ -1,13 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { Container, Wrapper, Plus, Title, Tab, IconWrapper, TabClone } from './style'
 import NavbarIcon1 from '../../../assets/icons/NavbarIcon1.svg'
 import NavbarIcon2 from '../../../assets/icons/NavbarIcon2.svg'
 import AddOrder from '../AddOrder/index.jsx'
+import UserContext from '../../../context/UserContext'
 
 export const Navbar = () => {
   const [isActive, setActive] = useState('Yangi')
   const [isTabActive, setTabActive] = useState('birinchi')
   const [isAddCard, setAddCard] = useState(false)
+
+  const{settoggleCard, usetoggleCard} = useContext(UserContext)
+
+  function changeAll(event){
+    setTabActive(event)
+
+    if(event == 'ikkinchi'){
+      settoggleCard(true)
+    }else settoggleCard(false)
+
+  }
+
   return (
     <Container>
       <Wrapper  buyurtma={true}   >
@@ -15,17 +28,7 @@ export const Navbar = () => {
         <Plus onClick={() => setAddCard(!isAddCard)} >+</Plus>
 
         <Title>Yangi buyurtma qo'shish</Title>
-     {/* 
-        <TabClone>
-
-          <IconWrapper onClick={() => setTabActive('birinchi')} active={isTabActive === 'birinchi'} >
-            <Tab.Icon src={NavbarIcon1} />
-          </IconWrapper>
-          <IconWrapper onClick={() => setTabActive('ikkinchi')} active={isTabActive === 'ikkinchi'} r>
-            <Tab.Icon src={NavbarIcon2} />
-          </IconWrapper>
-
-        </TabClone> */}
+  
 
       </Wrapper>
 
@@ -39,10 +42,10 @@ export const Navbar = () => {
       </Wrapper>
       <Wrapper align  toggle={true}   >
         <Tab>
-          <IconWrapper onClick={() => setTabActive('birinchi')} active={isTabActive === 'birinchi'} >
+          <IconWrapper onClick={() =>changeAll('birinchi') } active={isTabActive === 'birinchi'} >
             <Tab.Icon src={NavbarIcon1} />
           </IconWrapper>
-          <IconWrapper onClick={() => setTabActive('ikkinchi')} active={isTabActive === 'ikkinchi'} r>
+          <IconWrapper onClick={() => changeAll('ikkinchi')} active={isTabActive === 'ikkinchi'} r>
             <Tab.Icon src={NavbarIcon2} />
           </IconWrapper>
         </Tab>

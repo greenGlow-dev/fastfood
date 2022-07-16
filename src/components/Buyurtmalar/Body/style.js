@@ -8,6 +8,7 @@ justify-content:center;
 `
 export const Wrapper = styled.div`
 display:flex;
+display:${({falseTrue})=>falseTrue ? 'flex;':'none;'};
 align-items:center;
 justify-content:center;
 margin:5px 10px;

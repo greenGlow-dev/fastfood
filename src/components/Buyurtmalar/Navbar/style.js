@@ -12,7 +12,6 @@ const getOrder = ({ order }) => {
 export const Container = styled.div`
 display:flex;
 width:99.9%;
- }
 `
 export const Wrapper = styled.div`
 display:flex;
@@ -46,7 +45,7 @@ font-weight:bold;
 margin-right:14px;
 cursor:pointer;
 
-@media(max-width:1300px){
+@media screen and (max-width:1300px){
     width: 33px;
     height: 32px;
     font-size:14px;
@@ -104,12 +103,13 @@ cursor: pointer;
 background:${({ active }) => active && 'white'};
 box-shadow: ${({ active }) => active && '0px 2px 2px rgba(174, 176, 181, 0.314986)'};
 border-radius:  18px;
-transition: all .28s
+transition: all .28s;
 
-@media(max-width:1300px){
+@media(max-width:1300px)
+{
     font-size: 12px;
     line-height: 14px;
-    width: 142px;
+    width:142px;
     height: 36px;
 }
 
@@ -126,7 +126,7 @@ align-items: center;
 justify-content: center;
 width: 36px;
 height: 36px;
-background: ${({ active }) => active && '#FFFFFF;'}  
+background: ${({ active }) => active && '#FFFFFF;'};  
 box-shadow: 0px 2px 2px rgba(174, 176, 181, 0.314986);
 border-radius: 18px;
 transition: all .28s;

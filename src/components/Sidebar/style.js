@@ -16,15 +16,28 @@ align-items:center;
 height:100px;
 margin-bottom:64px;
 padding:0 24px;
+@media(max-width:1300px){
+  margin-bottom:54px;
+}
+
+
 `;
 LogoWrapper.Img = styled.img`
 width:70px;
 height:70px;
 border-radius:50%;
 margin-right:20px;
-@media(max-width:1300px){
-  width:50px;
-  height:50px;
+animation-name: spin;
+animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
 `;
 
@@ -83,7 +96,7 @@ export const Link = styled(NavLink)`
  height: 48px;
  padding-right:120px;
  padding-left:20px;
- background: ${({ active }) => active && '#FCB600;'};
+ background: ${({ active }) => active && '#bf0000;'};
  color: ${({ active }) => active && 'white;'};
  border-radius: 0px 6px 6px 0px;
 
@@ -93,6 +106,7 @@ export const Link = styled(NavLink)`
  line-height: 15px;
  padding-right:100px;
  padding-left:15px;
+ margin:0 14px 12px 0;
 }
 
  .icon{

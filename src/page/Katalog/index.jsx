@@ -1,16 +1,15 @@
 import React from 'react'
-import Buyurtma from '../../components/Buyurtmalar'
-import Mahsulot from '../../components/Mahsulotlar';
+import Katalog from '../../components/Kataloglar/index';
 
 
 
 
-export const Mahsulotlar = () => {
+export const Kataloglar = () => {
 
 
   return (
-  <Mahsulot/>
+  <Katalog/>
   )
   
 }
-export default Mahsulotlar ;
+export default Kataloglar ;
