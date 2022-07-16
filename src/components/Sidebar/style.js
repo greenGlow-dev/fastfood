@@ -8,6 +8,8 @@ flex-direction:column;
 height:100vh;
 padding:28px 0 40px 0; /// tepasiga:28px yonga 0 pastiga 40px yonga 0;
 background-color:white;
+/* position: absolute;
+left: 0; */
 `;
 
 export const LogoWrapper = styled.div`

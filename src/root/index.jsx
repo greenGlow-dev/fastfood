@@ -1,6 +1,6 @@
 import React,{useState,useContext} from 'react'
 import Sidebar from "../components/Sidebar";
-import { Container, Body } from "./style";
+import { Container,Sorry, Body } from "./style";
 import {HashRouter as Router,BrowserRouter, Routes, Route, Switch } from "react-router-dom";
 import { sidebar } from "../utils/sidebar";
 import Notfound from "../components/Notfound";
@@ -41,7 +41,7 @@ console.log(window.innerWidth)
                     
                         sidebar.map(({id,path})=>{
                               return(
-                                    <Route  key={id} path={path} element={<Sidebar/>} />
+                                    <Route  key={id}  path={path} element={<Sidebar/>} />
                                     
                               )
                         })
@@ -76,6 +76,9 @@ console.log(window.innerWidth)
 
 
       </Container>
+      <Sorry>Sorry!This is a <mark>adminPanel</mark>, The page is not responsive.
+GreenGlow doesn't want you to see his page crashed.
+Please, open the page with device that has at least 1100px width.</Sorry>
       </UserContext.Provider>
       
       )

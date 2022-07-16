@@ -48,7 +48,7 @@ cursor:pointer;
 @media screen and (max-width:1300px){
     width: 33px;
     height: 32px;
-    font-size:14px;
+    font-size:18px;
 }
 
 `

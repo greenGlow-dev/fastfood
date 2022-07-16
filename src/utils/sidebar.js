@@ -18,7 +18,7 @@ import Kataloglar from "../page/Katalog/index";
 export const sidebar  = [
     {
     id:1,
-    path:'/buyurtmalar',
+    path:'/',
     title: 'Buyurtmalar',
     Icon: buyurtmalar,
     Component: Buyurtmalar,
